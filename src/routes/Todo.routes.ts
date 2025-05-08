@@ -1,9 +1,9 @@
-import { Router } from "express";
+import { Router , Request , Response } from "express";
 
-const router = Router();
+const todoRouter = Router();
 
-router.get("/", (req, res) => {
+todoRouter.get("/", (req:Request  , res:Response) => {
   res.send("Todos");
 });
 
-export default router;
+export default todoRouter;
