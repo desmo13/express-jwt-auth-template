@@ -1,9 +1,10 @@
 import express from 'express';
 import dotenv from 'dotenv';
+dotenv.config();//✔️ This must go first, BEFORE any import that uses process.env
 import todoRouter from '@/routes/Todo.routes';
 import authRouter from '@/routes/auth.routes';
 import { protegerRuta } from '@/middlewares/auth.middleware';
-dotenv.config();
+
 
 const app = express();
 app.use(express.json());
